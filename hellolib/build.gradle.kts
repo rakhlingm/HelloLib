@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -53,7 +53,7 @@ afterEvaluate {
 
                 groupId = "com.github.rakhlingm"
                 artifactId = "hellolib"
-                version = "1.0.2"
+                version = "1.0.3"
             }
         }
     }
