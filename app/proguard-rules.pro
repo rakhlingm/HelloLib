@@ -1,15 +1,11 @@
-# --- Keep only the public API ---
+# Keep only the public API
 
-# Keep the HelloApi interface
 -keep interface team.night.hellolib.HelloApi { *; }
 
-# Keep the Kotlin file that contains the createHelloProvider() function
--keep class team.night.hellolib.HelloProviderKt { *; }
+# ✅ Keep top-level Kotlin function (static in HelloProviderKt class)
+-keep public class team.night.hellolib.HelloProviderKt {
+    public static *;
+}
 
-# --- Hide everything else ---
-
-# Suppress warnings about the internal implementation
+# Suppress internal warnings
 -dontwarn team.night.hellolib.internal.**
-
-# All other classes can be renamed or removed
-# (no need to explicitly keep them)

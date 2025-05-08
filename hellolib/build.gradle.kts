@@ -53,7 +53,7 @@ afterEvaluate {
 
                 groupId = "com.github.rakhlingm"
                 artifactId = "hellolib"
-                version = "1.0.4"
+                version = "1.0.6"
             }
         }
     }
