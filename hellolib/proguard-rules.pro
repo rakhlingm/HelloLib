@@ -1,9 +1,7 @@
--keep interface team.night.hellolib.HelloApi { *; }
+# Keep only the public API
 
-# ✅ Keep top-level Kotlin function (static in HelloProviderKt class)
--keep public class team.night.hellolib.HelloProvider {
-    public static *;
-}
+-keep interface team.night.hellolib.HelloApi { *; }
+-keep class team.night.hellolib.HelloProvider { *; }
 
 # Suppress internal warnings
 -dontwarn team.night.hellolib.internal.**
